@@ -140,7 +140,13 @@ ismlar = []
 # ism_fam("ghfghfh","fhyfhfhfy")
 #
 # print('salom')
+def masalani_ishlash(son):
+    a=son**2
+    b=son**3
+    print(a,b)
 
+masalani_ishlash(6)
+# men tog`ri ishladimmi?
 
 
 
