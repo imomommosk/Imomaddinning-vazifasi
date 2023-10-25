@@ -2,24 +2,24 @@
 
 
 
-ismlar = []
+# ismlar = []
 
-# print("Yaqin do'stlaringiz ro'yxatini tuzamiz.")
-# n=1
+#  print("Yaqin do'stlaringiz ro'yxatini tuzamiz.")
+#  n=1
 # while True:
-#     savol = f"{n}-do'stingiz ismini kiriting:"
-#     ism = input(savol)
-#     ismlar.append(ism)
-#     javob = input("Yana ism qo'shasizmi? (./yo'q)")
-#     if javob =='.':
+#      savol = f"{n}-do'stingiz ismini kiriting:"
+#      ism = input(savol)
+#      ismlar.append(ism)
+#      javob = input("Yana ism qo'shasizmi? (./yo'q)")
+#      if javob =='.':
 #         n+=1
-#         continue
-#     else:
-#         break
-
-
-
-
+#          continue
+#      else:
+#          break
+#
+#
+#
+#
 
 # """  UY  ISHI  """
 
@@ -91,7 +91,7 @@ ismlar = []
 # else:
 #     print("Bunday atama mavjud emas.")
 # print(berk)
-ismlar = []
+# ismlar = []
 #
 # print("Yaqin do'stlaringiz ro'yxatini tuzamiz.")
 # n=1 # ismlarni sanash uchun o'zgaruvchi
@@ -140,13 +140,249 @@ ismlar = []
 # ism_fam("ghfghfh","fhyfhfhfy")
 #
 # print('salom')
-def masalani_ishlash(son):
-    a=son**2
-    b=son**3
-    print(a,b)
+# def masalani_ishlash(son):
+#     a=son**2
+#     b=son**3
+#     print(a,b)
+#
+# masalani_ishlash(1)
+# masalani_ishlash(2)
+# masalani_ishlash(3)
+# masalani_ishlash(4)
+# masalani_ishlash(5)
+# masalani_ishlash(6)
+# masalani_ishlash(7)
+# masalani_ishlash(8)
+# masalani_ishlash(9)
+# masalani_ishlash(10)
 
-masalani_ishlash(6)
-# men tog`ri ishladimmi?
+# def toliq_ism_yasa(ism,familya):
+#     """toliq ismni qaytaruvchi funksiya"""
+#     toliq_ism = f"{ism},{familya}"
+#     return toliq_ism
+#
+# tеalaba1=toliq_ism_yasa('olim','hakimov')
+# talaba2=toliq_ism_yasa('hakim','olimov')
+# print(f"darska kelmagan talabalar {talaba1} {talaba2}")
+# def toliq_ism_yasa(ism,familya,otasining_ismi=''):
+#     """toliq ismni qaytaruvchi funksiya"""
+#     if otasining_ismi:
+#         toliq_ism = f"{ism} {otasining_ismi} {familya}"
+#     else:
+#         toliq_ism=f"{ism} {familya}"
+#     return toliq_ism.title()
+# talaba1=toliq_ism_yasa('olim','hakimov')
+# talaba2=toliq_ism_yasa('hakim','olimov','abrorovich')
+# print(f"Darsga kelmagan oquvchilar {talaba1} va {talaba2}")
+#
+# def avto_kompaniya(kompaniya, model, rangi, korobka, yili, narxi=None):
+#     avto = {'kompaniya':kompaniya,
+#             'model':model,
+#             'rangi':rangi,
+#             'korobka':korobka,
+#             'yili':yili,
+#             'narxi':narxi}
+#     return avto
+# avto1=avto_kompaniya('BMW','BMW 8','qora','afto','2022','110.000$')
+# avto2=avto_kompaniya('Mercides','mercides E 200','oq','afato','2020','75.000$')
+# avtolar=[avto1, avto2]
+# print('onlayn bozorda mavjud avtomobillar:')
+# for avto in avtolar:
+#     if avto['narx']:
+#
+# def oraliq(min, max):
+#     sonlar = []
+#     while min<max:
+#         sonlar.append(min)
+#         min += 1
+#     return sonlar
+# print(oraliq(0,11))
+# print(oraliq(10,21))
+# print("Saytmizdagi avtolar royixati.")
+# avtolar=[]
+# while True:
+#     print("\n Quydagi malumotlarni kriting")
+#     kompaniya = input("ishlab chqaruvchi: ")
+#     model = input("Modeli:")
+#     rangi = input("rangi:")
+#     karobka = input("karobka")
+#     yili= input("yili")
+#     narxi =input("narxi")
+#
+#
+#     avtolar.append(avto_kompaniya(kompaniya, model, rangi, karobka, yili, narxi))
+#
+#     javob= input("yana avto qoshasizmi? (ha/yoq): ")
+#     if javob == 'yoq':
+#         break
+#
+# print(avtolar)
+
+# def toliq_ism_yasa(ism, familiya):
+#     """Toliq isma qaytaruvchi funksiya"""
+#     toliq_ism = f"{ism} {familiya}"
+#     return toliq_ism
+#
+# talaba1 = toliq_ism_yasa('olim','hakimov')
+# talaba2 = toliq_ism_yasa('hakim','olimov')
+#
+# print(f"Darsga kelmagan talabalar: {talaba1} va {talaba2}")
+#
+# def toliq_ism_yasa(ism, familiya, otasining_ismi=''):
+#      """Toliq isma qaytaruvchi funksiya"""
+#      if otasining_ismi: # otasining_ismi mavjudligini tekshiramiz
+#          toliq_ism = f"{ism} {otasining_ismi} {familiya}"
+#      else:
+#          toliq_ism = f"{ism} {familiya}"
+#      return toliq_ism.title()
+#
+#
+# def a(ism, familiya, otasining_ismi=''):
+#     """Toliq isma qaytaruvchi funksiya"""
+#     if otasining_ismi: # otasining_ismi mavjudligini tekshiramiz
+#         toliq_ism = f"{ism} {otasining_ismi} {familiya}"
+#     else:
+#         toliq_ism = f"{ism} {familiya}"
+#     return toliq_ism.title()
+#
+# talaba1 = toliq_ism_yasa('olim','hakimov') #otasining_ismi kiritilmadi
+# talaba2 = toliq_ism_yasa('hakim','olimov','abrorovich')
+# print(f"Darsga kelmagan talabalar: {talaba1} va {talaba2}")
+
+# fibonacbhi_a=[1]
+# def fibonacci(n):
+#     sonlar = []
+#     for x in range(n):
+#         if x == 0 or x == 1:
+#             sonlar.append(1)
+#         else:
+#             sonlar.append(sonlar[x - 1] + sonlar[x - 2])
+#     return sonlar
+#
+#
+# print(fibonacci(100))
+
+
+# def tub_sonlarni_top(min, max):
+#     tub_sonlar = []
+#     for n in range(min, max + 1):
+#         tub = True
+#         if n == 1:
+#             tub = False
+#         elif n == 2:
+#             tub = True
+#         else:
+#             for x in range(2, n):
+#                 if n % x == 0:
+#                     tub = False
+#         if tub:
+#             tub_sonlar.append(n)
+#
+#     return tub_sonlar
+#
+# oraliq1 = int(input("Birinchi oraliq: "))
+# oraliq2 = int(input("Ikkinchi oraliq: "))
+# tub_oraliq = tub_sonlarni_top(oraliq1,oraliq2)
+# print(tub_oraliq)
+
+# def bahola(ismlar):
+#     baholar = {}
+#     while ismlar:
+#         ism = ismlar.pop()
+#         baho = input(f"Talaba {ism.title()}ning bahosini kiriting: ")
+#         baholar[ism]=baho
+#     return baholar
+#
+# talabalar = ['ali', 'vali', 'hasan', 'husan']
+# baholar = bahola(talabalar)
+# print(baholar)
+#
+# def katta_harf(matnlar):
+#     for i in range(len(matnlar)):
+#         matnlar[i]= matnlar[i].title()
+#
+# ismlar = ['ali','vali','hasan','husan']
+# katta_harf(ismlar)
+# print(ismlar)
+
+# def katta_harf(matnlar):
+#     matnlar=matnlar[:]
+#     for i in range(len(matnlar)):
+#         matnlar[i]=matnlar[i].title()
+#     return matnlar
+# ismlar = ['ali','vali','hasan','husan']
+# yangi_ismlar = katta_harf(ismlar)
+# print(ismlar)
+# print(yangi_ismlar)
+
+talabalar =['ali','vali','hasan','husan']
+
+def bahola(ismlar):
+    baholar={}
+    for ism in ismlar:
+        baho=input(f"Talaba {ism.upper()}ning bahosini kriting: ")
+        baholar[ism]= baho
+    return baholar
+
+baholar = bahola (talabalar)
+print(baholar)
+print(talabalar[1].title())
+
+# Funkiyaga ro'yhat uzatib ro'yhatda uchragan vali ismini
+# birinchi harfini katta harf bilan, qolgan elementlarini hamma harfini
+# katta harf bilan chiqaring.Hamda ali ismli odamga salom yo'llang!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
