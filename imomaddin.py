@@ -315,44 +315,136 @@
 # print(ismlar)
 # print(yangi_ismlar)
 
-talabalar =['ali','vali','hasan','husan']
+# talabalar =['ali','vali','hasan','husan']
+#
+# def bahola(ismlar):
+#     baholar={}
+#     for ism in ismlar:
+#         baho=input(f"Talaba {ism.upper()}ning bahosini kriting: ")
+#         baholar[ism]= baho
+#     return baholar
+#
+# baholar = bahola (talabalar)
+# print(baholar)
+# print(talabalar[1].title())
+#
+# # Funkiyaga ro'yhat uzatib ro'yhatda uchragan vali ismini
+# # birinchi harfini katta harf bilan, qolgan elementlarini hamma harfini
+# # katta harf bilan chiqaring.Hamda ali ismli odamga salom yo'llang!
+# #
+# # a=input('ulkan daraxt binodan xam ulkan: xa/yoq')
+# # while True:
+# #     if a == 'xa':
+# #         break
+# #         print('javob togri')
+#
+# ismlar =['ali','vali','hasan','husan']
+# def a(ismlar):
+#     for ism in  ismlar
 
-def bahola(ismlar):
-    baholar={}
-    for ism in ismlar:
-        baho=input(f"Talaba {ism.upper()}ning bahosini kriting: ")
-        baholar[ism]= baho
-    return baholar
+# def katta_harf(matnlar):
+#     for i in range(len(matnlar)):
+#         if matnlar[i] == 'vali':
+#             matnlar[i] = matnlar[i].title()
+#             print(f"Salom, {matnlar[i]} ")
+#         else:
+#             matnlar[i] = matnlar[i].upper()
+#
+#
+# ismlar = ['ali', 'vali', 'hasan', 'husan']
+# katta_harf(ismlar)
+# print(ismlar)
 
-baholar = bahola (talabalar)
-print(baholar)
-print(talabalar[1].title())
+# def summa(*sonlar):
+#     """kritilagan sonlar yigingisini hisoblaydigan funnksiya"""
+#     yigindi=0
+#     for son in sonlar:
+#         yigindi+= son
+#     return yigindi
+# print(summa(1,2,))
+# print(summa(1,2,3,4,5,6,7,8,9,10))
 
-# Funkiyaga ro'yhat uzatib ro'yhatda uchragan vali ismini
-# birinchi harfini katta harf bilan, qolgan elementlarini hamma harfini
-# katta harf bilan chiqaring.Hamda ali ismli odamga salom yo'llang!
+# def summa(x,y,*sonlar):
+#     """kritilagan sonlar yigingisini hisoblaydigan funnksiya"""
+#     return x+y+sum(sonlar)
+#
+# print(summa(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14))
 
+# def summa(*sonlar):
+#     """kritilagan sonlar yigingisini hisoblaydigan funnksiya"""
+#     return sum(sonlar)
+#
+# print(summa(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14))
 
+# def avto_info(kompaniya,model,**malumotlar):
+#     """Avto xaqidagi malumotlarni lugat korinishida qaytaruvchi funksiya"""
+#     malumotlar[kompaniya]='kompaniya'
+#     malumotlar[model]='model'
+#     return malumotlar
+# 
+# avto1 =avto_info("Tayota","SUPRA",rangi='sargich',yili='2023',)
+# avto2=avto_info('BMW','BMW m8',rangi='qora')
+# print(f"{avto1} \n {avto2}")
 
+# def katta_harf(matnlar):
+#     for i in range(len(matnlar)):
+#         if matnlar[i] == 'vali':
+#             matnlar[i] = matnlar[i].title()
+#             print(f"Salom, {matnlar[i]} ")
+#         else:
+#             matnlar[i] = matnlar[i].upper()
+#
+# ismlar=['ali','vali','hasan','husan']
+# katta_harf(ismlar)
+# print(ismlar)
 
+# _________________________________________________________________________________________________________
+# def summa(*sonlar):
+#     """Kiritilgan sonlar yig'indisini hisoblaydigan funksiya"""
+#     yigindi = 1
+#     for son in sonlar:
+#         yigindi *= son
+#     return yigindi
+#
+# print(summa(1,2))
+# print(summa(1,2,3,4,5))
 
+# ________________________________________________________________________________________
+# def avto_info(kompaniya, model, rangi, korobka, yili, narhi=None):
+#     """Avtomobil haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya"""
+#     avto = {'kompaniya':kompaniya,
+#             'model':model,
+#             'rang':rangi,
+#             'korobka':korobka,
+#             'yil':yili,
+#             'narh':narhi}
+#     return avto
 
+def avto_kirit():
+    """Foydalanuvchiga avto_info funksiyasi yordamida bir nechta avtolar haqida ma'lumotlarni bitta ro'yxatga joylash imkonini beruvchi funksiya"""
+    avtolar=[] # salondagi avtolar uchun bo'sh ro'yxat
+    while True:
+        print("\nQuyidagi ma'lumotlarni kiriting",end='')
+        kompaniya=input("Ishlab chiqaruvchi: ")
+        model=input("Modeli: ")
+        rangi=input("Rangi: ")
+        korobka=input("Korobka: ")
+        yili=input("Ishlab chiqarilgan yili: ")
+        narhi=input("Narhi: ")
+        #Foydalanuvchi kiritdan ma'lumotlardan avto_info yordamida
+        #lug'at shakllantirib, har bir lug'atni ro'yxatga qo'shamiz:
+        avtolar.append(avto_info(kompaniya, model, rangi, korobka, yili, narhi))
+        # Yana avto qo'shish-qo'shmaslikni so'raymiz
+        javob = input("Yana avto qo'shasizmi? (yes/no): ")
+        if javob=='no':
+            break
+    return avtolar
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def info_print(avto_info):
+    """Avtomobillar haqida ma'lumotlar saqlangan lug'atni konsolga chiqaruvchi funksiya"""
+    print(f"{avto_info['rang'].title()} {avto_info['kompaniya'].upper()} "
+          f"{avto_info['model'].upper()}, {avto_info['korobka']} korobka, "
+          f"{avto_info['yil']}-yil, {avto_info['narh']}$")
 
 
 
