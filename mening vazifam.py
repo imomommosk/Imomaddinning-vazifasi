@@ -477,7 +477,7 @@ import random as r
 # ________________________________________________________________________________________________________________________
 import random as r
 
-ismlar = ['olim','anvar','hasan','husan','ali','vali','eshmat','toshmat','rayim',"kimdir"]
+ismlar = ['olim','anvar','hasan','husan','ali','vali','eshmat','toshmat','rayim',"toxir"]
 ism = r.choices(ismlar)
 print(ism)
 print(f"{r.choice(ism)}")
