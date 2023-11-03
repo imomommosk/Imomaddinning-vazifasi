@@ -626,12 +626,12 @@
 #
 # taltalaba4 = Talaba("Imomaddin","Iskandarov",2008)
 # print(taltalaba4.familiasini_chqar())
-
+# _____________________________________________________________________________________________________________
 class User:
     def __init__(self, name, username, email):
-        self.name = name
-        self.uname = username
-        self.mail = email
+        self.ismingiz = name
+        self.login = username
+        self.parol = email
 
     def get_name(self):
         return f"sizning ismingiz{self.name}"
@@ -642,11 +642,11 @@ class User:
     def get_uname(self):
         return f"sizning unamemiz {self.uname}"
 
-Malumot = User("Imomaddin", "imomovich", "imom@gmail.com")
+Malumot = User(f"Imomaddin", "imomaddiniskandarov@gmail.com", "imomaddin08")
 
-print(Malumot.uname)
-print(Malumot.mail)
-print(Malumot.name)
+print(f"ismingiz: {Malumot.ismingiz}. login: {Malumot.login}. login parolingiz: {Malumot.parol}")
+# print(Malumot.login)
+# print(Malumot.parol)
 
 
 
