@@ -644,7 +644,7 @@ class User:
 
 Malumot = User(f"Imomaddin", "imomaddiniskandarov@gmail.com", "imomaddin08")
 
-print(f"ismingiz: {Malumot.ismingiz}. login: {Malumot.login}. login parolingiz: {Malumot.parol}")
+print(f"ismi: {Malumot.ismingiz}. login: {Malumot.login}. login paroli: {Malumot.parol}")
 # print(Malumot.login)
 # print(Malumot.parol)
 
