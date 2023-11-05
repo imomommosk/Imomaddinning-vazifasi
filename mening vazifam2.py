@@ -626,12 +626,144 @@
 #
 # taltalaba4 = Talaba("Imomaddin","Iskandarov",2008)
 # print(taltalaba4.familiasini_chqar())
-# _____________________________________________________________________________________________________________
-class User:
-    def __init__(self, name, username, email):
-        self.ismingiz = name
-        self.login = username
-        self.parol = email
+# # _____________________________________________________________________________________________________________
+# class User:
+#     def __init__(self, name, username, email):
+#         self.ismingiz = name
+#         self.login = username
+#         self.parol = email
+#
+#     def get_name(self):
+#         return f"sizning ismingiz{self.name}"
+#
+#     def get_mail(self):
+#         return f"sizning emailingiz{self.mail}"
+#
+#     def get_uname(self):
+#         return f"sizning unamemiz {self.uname}"
+#
+# Malumot = User(f"Imomaddin", "imomaddiniskandarov@gmail.com", "imomaddin08")
+#
+# print(f"ismi: {Malumot.ismingiz}. login: {Malumot.login}. login parolio: {Malumot.parol}")
+# print(Malumot.login)
+# print(Malumot.parol)
+#
+# class Talaba:
+#     """Talaba nomli klass yaratamiz"""
+#     def __init__(self,ism,familiya,tyil):
+#         """Tqlabalarning xususiyatlari"""
+#         self.ism=ism
+#         self.familiya=familiya
+#         self.tyil=tyil
+#         self.bosqich=1
+#
+#     def get_info(self):
+#         return f"{self.ism} {self.familiya}. {self.tyil} {self.bosqich}-bosqich talabasi"
+#
+# talaba1=Talaba(f"imomaddin","iskandarov","2008",)
+# print(talaba1.get_info())
+#
+# talaba1.bosqich=2
+# print(talaba1.bosqich)
+
+# class Talaba:
+#     """Talaba nomli klass yaratamiz"""
+#     def __init__(self,ism,familiya,tyil):
+#         """Tqlabalarning xususiyatlari"""
+#         self.ism=ism
+#         self.familiya=familiya
+#         self.tyil=tyil
+#         self.bosqich=1
+#
+#     def get_info(self):
+#         return f"{self.ism} {self.familiya}. {self.tyil} {self.bosqich}-bosqich talabasi bolishi mumkun"
+#
+#     def get_name(self):
+#         """Talabaning ismini qaytaradi"""
+#         return self.ism
+#
+#     def get_lastname(self):
+#         """Talabaning familiyasini qaytaradi"""
+#         return self.familiya
+#
+#     def get_fullname(self):
+#         """Talabaning ism-familiyasini qaytaradi"""
+#         return f"{self.ism} {self.familiya}"
+#
+#     def get_age(self, yil):
+#         """Talabaning yoshini qaytaradi"""
+#         return yil - self.tyil
+#
+#
+# talaba1 = Talaba(f"imomaddin", "iskandarov", "2008", )
+#
+# print(talaba1.get_info())
+
+# talaba1.update_bosqich()
+# print(talaba1.get_info())
+#
+# talaba1.update_bosqich()
+# print(talaba1.get_info())
+#
+# class Fan():
+#     def __init__(self,nomi):
+#         self.nomi=nomi
+#         self.talabalar_soni=0
+#         self.talabalar=[]
+#
+#     def add_student(self,talaba):
+#         self.talabalar.append(talaba)
+#         self.talabalar_soni += 1
+#
+#     def get_name(self):
+#         """Fan nomi"""
+#         return self.nomi
+#
+#     def get_students(self):
+#         """Fanga yozilgan talabalar haqida ma'lumot"""
+#         return [x.get_info() for x in self.talabalar]
+#
+#     def get_students_num(self):
+#         """Fanga yozilgan talabalar soni"""
+#         return self.talabalar_soni
+#
+# matematika = Fan("Oliy matematika")
+# talaba1 =Talaba('Alijon','Valiyev',2000)
+# talaba2=Talaba('Hasan','Alimov',2001)
+# talaba3=Talaba('Akrom',"Boriyev",2001)
+#
+# matematika.add_student(talaba1)
+# matematika.add_student(talaba2)
+# matematika.add_student(talaba3)
+#
+# mat_talabalar = matematika.get_students()
+# print(mat_talabalar)
+
+class Avto:
+    def __init__(self,model,rang,karopka,narx):
+        self.model=model
+        self.rang=rang
+        self.karopka=karopka
+        self.narx=narx
+        self.kilometr=0
+
+    def get_info(self):
+        return f"{self.model} {self.rang} rangli {self.karopka}-karobkali {self.narx} {self.kilometr}-kilometr yurgan"
+
+    def set_kilometr(self,kilometr):
+        self.kilometr=kilometr
+
+    def update_kilometr(self):
+        self.kilometr +=1
+
+avto_salon=Avto('BMW',"qora","avtomat","110.000$")
+print(avto_salon.get_info())
+
+avto_salon.update_kilometr()
+print(avto_salon.get_info())
+
+avto_salon.update_kilometr()
+print(avto_salon.get_info())
 
     def get_name(self):
         return f"sizning ismingiz{self.name}"
