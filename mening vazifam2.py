@@ -755,6 +755,7 @@ class Avto:
 
     def update_kilometr(self):
         self.kilometr +=1
+        self.kilometr +=10
 
 avto_salon=Avto('BMW',"qora","avtomat","110.000$")
 print(avto_salon.get_info())
@@ -767,19 +768,33 @@ print(avto_salon.get_info())
 
     def get_name(self):
         return f"sizning ismingiz{self.name}"
+avto_salon.update_kilometr()
+print(avto_salon.get_info())
 
     def get_mail(self):
         return f"sizning emailingiz{self.mail}"
 
     def get_uname(self):
         return f"sizning unamemiz {self.uname}"
+avto_salon.update_kilometr()
+print(avto_salon.get_info())
 
 Malumot = User(f"Imomaddin", "imomaddiniskandarov@gmail.com", "imomaddin08")
 
-print(f"ismi: {Malumot.ismingiz}. login: {Malumot.login}. login paroli: {Malumot.parol}")
 # print(Malumot.login)
 # print(Malumot.parol)
+avto_salon.update_kilometr()
+print(avto_salon.get_info())
 
 
+avto_salon.update_kilometr()
+print(avto_salon.get_info())
 
+
+avto_salon.update_kilometr()
+print(avto_salon.get_info())
+
+
+avto_salon.update_kilometr()
+print(avto_salon.get_info())
 
