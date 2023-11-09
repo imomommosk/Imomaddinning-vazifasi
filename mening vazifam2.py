@@ -739,62 +739,141 @@
 # mat_talabalar = matematika.get_students()
 # print(mat_talabalar)
 
-class Avto:
-    def __init__(self,model,rang,karopka,narx):
-        self.model=model
-        self.rang=rang
-        self.karopka=karopka
-        self.narx=narx
-        self.kilometr=0
+# class Avto:
+#     def __init__(self,model,rang,karopka,narx):
+#         self.model=model
+#         self.rang=rang
+#         self.karopka=karopka
+#         self.narx=narx
+#         self.kilometr=0
+#
+#     def get_info(self):
+#         return f"{self.model} {self.rang} rangli {self.karopka}-karobkali {self.narx} {self.kilometr}-kilometr yurgan"
+#
+#     def set_kilometr(self,kilometr):
+#         self.kilometr=kilometr
+#
+#     def update_kilometr(self):
+#         self.kilometr +=10
+#
+# avto_salon=Avto('BMW',"qora","avtomat","110.000$")
+# print(avto_salon.get_info())
+#
+# avto_salon.update_kilometr()
+# print(avto_salon.get_info())
+#
+# avto_salon.update_kilometr()
+# print(avto_salon.get_info())
+#
+# avto_salon.update_kilometr()
+# print(avto_salon.get_info())
+#
+#
+# avto_salon.update_kilometr()
+# print(avto_salon.get_info())
+#
+#
+# avto_salon.update_kilometr()
+# print(avto_salon.get_info())
+#
+#
+# avto_salon.update_kilometr()
+# print(avto_salon.get_info())
+#
+#
+# avto_salon.update_kilometr()
+# print(avto_salon.get_info())
+#
+#
+# avto_salon.update_kilometr()
+# print(avto_salon.get_info())
+#
+class Shaxs:
+    """shaxslar xaqida malumot"""
+    def __init__(self,ism,familiya,pasport,tyil):
+        self.ism=ism
+        self.familiya=familiya
+        self.pasport=pasport
+        self.tyil=tyil
 
     def get_info(self):
-        return f"{self.model} {self.rang} rangli {self.karopka}-karobkali {self.narx} {self.kilometr}-kilometr yurgan"
+        """shaxs xaqida malumot"""
+        info =f"{self.ism} {self.familiya}."
+        info +=f"passport:{self.pasport}, {self.tyil}-yilda tugilgan"
+        return info
 
-    def set_kilometr(self,kilometr):
-        self.kilometr=kilometr
+    def get_age(self,yil):
+        return yil- self.tyil
 
-    def update_kilometr(self):
-        self.kilometr +=1
-        self.kilometr +=10
+# Inson = Shaxs("Hasan","Alimov","IO08092008",2008)
+# print(f"{Inson.get_info()}. {Inson.get_age(2023)} yoshda")
 
-avto_salon=Avto('BMW',"qora","avtomat","110.000$")
-print(avto_salon.get_info())
+class Talaba(Shaxs):
+    """Talaba klassi"""
+    def __init__(self,ism,familiya,pasport,tyil,idraqam,manzil):
+        """Talabani xususiyatlari"""
+        super().__init__(ism,familiya,pasport,tyil)
+        self.idraqam=idraqam
+        self.bosqich=1
+        self.manzil=manzil
 
-avto_salon.update_kilometr()
-print(avto_salon.get_info())
+    def get_bosqich(self):
+        """talabaning oqish bosqichi"""
+        return self.bosqich
 
-avto_salon.update_kilometr()
-print(avto_salon.get_info())
+    def get_info(self):
+        """talaba xaqida malumot"""
+        info =f"{self.ism} {self.familiya}."
+        info+=f"{self.get_bosqich()}-bosqich.ID raqami:{self.idraqam}"
+        return  info
 
-    def get_name(self):
-        return f"sizning ismingiz{self.name}"
-avto_salon.update_kilometr()
-print(avto_salon.get_info())
+# talaba=Talaba('imomaddin','iskandarov','CI6513665','2008',65312136565)
+# print(talaba.get_info())
 
-    def get_mail(self):
-        return f"sizning emailingiz{self.mail}"
+class Manzil:
+    """Manzil saqlash uchun klass"""
 
-    def get_uname(self):
-        return f"sizning unamemiz {self.uname}"
-avto_salon.update_kilometr()
-print(avto_salon.get_info())
+    def __init__(self, uy, kocha, tuman, viloyat):
+        """Manzil xususiyatlari"""
+        self.uy = uy
+        self.kocha = kocha
+        self.tuman = tuman
+        self.viloyat = viloyat
 
-Malumot = User(f"Imomaddin", "imomaddiniskandarov@gmail.com", "imomaddin08")
+    def get_manzil(self):
+        """Manzilni ko'rish"""
+        manzil = f"{self.viloyat} viloyati, {self.tuman} tumani, "
+        manzil += f"{self.kocha} ko'chasi, {self.uy}-uy"
+        return manzil
+talaba_manzil= Manzil(12,"olmazor","bogbon","xorazm")
+talaba = Talaba("Valijon","Aliyev","JK6146351",2000,"62363143636814",talaba_manzil)
 
-# print(Malumot.login)
-# print(Malumot.parol)
-avto_salon.update_kilometr()
-print(avto_salon.get_info())
-
-
-avto_salon.update_kilometr()
-print(avto_salon.get_info())
-
-
-avto_salon.update_kilometr()
-print(avto_salon.get_info())
+print(talaba.manzil.get_manzil())
 
 
-avto_salon.update_kilometr()
-print(avto_salon.get_info())
 
+
+class Foydalanuvchi:
+    def __init__(self,ism,familiya,tyil):
+        self.ism=ism
+        self.familiya=familiya
+        self.tyil=tyil
+
+    def get_info(self):
+        info=f"{self.ism} {self.familiya}, {self.tyil}-yil"
+        return info
+
+foydalanuvchi=Foydalanuvchi('Imomaddin','Iskandarov',2008)
+print(foydalanuvchi.get_info())
+
+class Admin(Foydalanuvchi):
+    def __init__(self,ism,familiya,tyil,teshkiruvchi):
+        super().__init__(ism,familiya,tyil)
+        self.teshkiruvchi=teshkiruvchi
+
+    def ban_user(self):
+        return f"Foydalanuvchi {foydalanuvchi.get_info()} bloklandi."
+
+admin=Admin('Vali','Aliyev','2003','internet admini')
+print(admin.get_info())
+print(admin.ban_user())
