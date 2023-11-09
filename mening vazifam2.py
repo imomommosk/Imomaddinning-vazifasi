@@ -877,3 +877,4 @@ class Admin(Foydalanuvchi):
 admin=Admin('Vali','Aliyev','2003','internet admini')
 print(admin.get_info())
 print(admin.ban_user())
+1
