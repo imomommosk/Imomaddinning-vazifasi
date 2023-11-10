@@ -788,50 +788,97 @@
 # avto_salon.update_kilometr()
 # print(avto_salon.get_info())
 #
-class Shaxs:
-    """shaxslar xaqida malumot"""
-    def __init__(self,ism,familiya,pasport,tyil):
-        self.ism=ism
-        self.familiya=familiya
-        self.pasport=pasport
-        self.tyil=tyil
-
-    def get_info(self):
-        """shaxs xaqida malumot"""
-        info =f"{self.ism} {self.familiya}."
-        info +=f"passport:{self.pasport}, {self.tyil}-yilda tugilgan"
-        return info
-
-    def get_age(self,yil):
-        return yil- self.tyil
-
-# Inson = Shaxs("Hasan","Alimov","IO08092008",2008)
-# print(f"{Inson.get_info()}. {Inson.get_age(2023)} yoshda")
-
-class Talaba(Shaxs):
-    """Talaba klassi"""
-    def __init__(self,ism,familiya,pasport,tyil,idraqam,manzil):
-        """Talabani xususiyatlari"""
-        super().__init__(ism,familiya,pasport,tyil)
-        self.idraqam=idraqam
-        self.bosqich=1
-        self.manzil=manzil
-
-    def get_bosqich(self):
-        """talabaning oqish bosqichi"""
-        return self.bosqich
-
-    def get_info(self):
-        """talaba xaqida malumot"""
-        info =f"{self.ism} {self.familiya}."
-        info+=f"{self.get_bosqich()}-bosqich.ID raqami:{self.idraqam}"
-        return  info
+# class Shaxs:
+#     """shaxslar xaqida malumot"""
+#     def __init__(self,ism,familiya,pasport,tyil):
+#         self.ism=ism
+#         self.familiya=familiya
+#         self.pasport=pasport
+#         self.tyil=tyil
+#
+#     def get_info(self):
+#         """shaxs xaqida malumot"""
+#         info =f"{self.ism} {self.familiya}."
+#         info +=f"passport:{self.pasport}, {self.tyil}-yilda tugilgan"
+#         return info
+#
+#     def get_age(self,yil):
+#         return yil- self.tyil
+#
+# # Inson = Shaxs("Hasan","Alimov","IO08092008",2008)
+# # print(f"{Inson.get_info()}. {Inson.get_age(2023)} yoshda")
+#
+# class Talaba(Shaxs):
+#     """Talaba klassi"""
+#     def __init__(self,ism,familiya,pasport,tyil,idraqam,manzil):
+#         """Talabani xususiyatlari"""
+#         super().__init__(ism,familiya,pasport,tyil)
+#         self.idraqam=idraqam
+#         self.bosqich=1
+#         self.manzil=manzil
+#
+#     def get_bosqich(self):
+#         """talabaning oqish bosqichi"""
+#         return self.bosqich
+#
+#     def get_info(self):
+#         """talaba xaqida malumot"""
+#         info =f"{self.ism} {self.familiya}."
+#         info+=f"{self.get_bosqich()}-bosqich.ID raqami:{self.idraqam}"
+#         return  info
 
 # talaba=Talaba('imomaddin','iskandarov','CI6513665','2008',65312136565)
 # print(talaba.get_info())
 
 class Manzil:
     """Manzil saqlash uchun klass"""
+# class Manzil:
+#     """Manzil saqlash uchun klass"""
+#
+#     def __init__(self, uy, kocha, tuman, viloyat):
+#         """Manzil xususiyatlari"""
+#         self.uy = uy
+#         self.kocha = kocha
+#         self.tuman = tuman
+#         self.viloyat = viloyat
+#
+#     def get_manzil(self):
+#         """Manzilni ko'rish"""
+#         manzil = f"{self.viloyat} viloyati, {self.tuman} tumani, "
+#         manzil += f"{self.kocha} ko'chasi, {self.uy}-uy"
+#         return manzil
+# talaba_manzil= Manzil(12,"olmazor","bogbon","xorazm")
+# talaba = Talaba("Valijon","Aliyev","JK6146351",2000,"62363143636814",talaba_manzil)
+#
+# print(talaba.manzil.get_manzil())
+#
+#
+#
+#
+# class Foydalanuvchi:
+#     def __init__(self,ism,familiya,tyil):
+#         self.ism=ism
+#         self.familiya=familiya
+#         self.tyil=tyil
+#
+#     def get_info(self):
+#         info=f"{self.ism} {self.familiya}, {self.tyil}-yil"
+#         return info
+#
+# foydalanuvchi=Foydalanuvchi('Imomaddin','Iskandarov',2008)
+# print(foydalanuvchi.get_info())
+#
+# class Admin(Foydalanuvchi):
+#     def __init__(self,ism,familiya,tyil,teshkiruvchi):
+#         super().__init__(ism,familiya,tyil)
+#         self.teshkiruvchi=teshkiruvchi
+#
+#     def ban_user(self):
+#         return f"Foydalanuvchi {foydalanuvchi.get_info()} bloklandi."
+#
+# admin=Admin('Vali','Aliyev','2003','internet admini')
+# print(admin.get_info())
+# print(admin.ban_user())
 
     def __init__(self, uy, kocha, tuman, viloyat):
         """Manzil xususiyatlari"""
@@ -839,6 +886,33 @@ class Manzil:
         self.kocha = kocha
         self.tuman = tuman
         self.viloyat = viloyat
+#
+#
+# class Foydalanuvchi:
+#     def __init__(self,ism,familiya,tyil):
+#         self.ism=ism
+#         self.familiya=familiya
+#         self.tyil=tyil
+#
+#     def get_info(self):
+#         info=f"{self.ism} {self.familiya}, {self.tyil}-yil"
+#         return info
+#
+# foydalanuvchi=Foydalanuvchi('Imomaddin','Iskandarov',2008)
+# print(foydalanuvchi.get_info())
+#
+# class Admin(Foydalanuvchi):
+#     def __init__(self,ism,familiya,tyil,teshkiruvchi):
+#         super().__init__(ism,familiya,tyil)
+#         self.teshkiruvchi=teshkiruvchi
+#
+#     def ban_user(self):
+#         return f"Foydalanuvchi {foydalanuvchi.get_info()} bloklandi."
+#
+# admin=Admin('Vali','Aliyev','2003','internet admini')
+# print(admin.get_info())
+# print(admin.ban_user())
+# 1
 
     def get_manzil(self):
         """Manzilni ko'rish"""
@@ -848,31 +922,156 @@ class Manzil:
 talaba_manzil= Manzil(12,"olmazor","bogbon","xorazm")
 talaba = Talaba("Valijon","Aliyev","JK6146351",2000,"62363143636814",talaba_manzil)
 
-print(talaba.manzil.get_manzil())
+# class Foydalanuvchi:
+#     def __init__(self,ism,familiya,tyil):
+#         self.ism=ism
+#         self.familiya=familiya
+#         self.tyil=tyil
+#
+#     def get_info(self):
+#         info=f"{self.ism} {self.familiya}, {self.tyil}-yil"
+#         return info
+#
+# foydalanuvchi=Foydalanuvchi('Imomaddin','Iskandarov',2008)
+# print(foydalanuvchi.get_info())
+#
+# class Admin(Foydalanuvchi):
+#     def __init__(self,ism,familiya,tyil,teshkiruvchi):
+#         super().__init__(ism,familiya,tyil)
+#         self.teshkiruvchi=teshkiruvchi
+#
+#     def ban_user(self):
+#         return f"Foydalanuvchi {foydalanuvchi.get_info()} bloklandi."
+#
+# admin=Admin('Vali','Aliyev','2003','internet admini')
+# print(admin.get_info())
+# print(admin.ban_user())
 
+#
+# from uuid import uuid4
 
+# class Avto:
+#
+#     def __init__(self,make,model,rang,yil,narx,km=0):
+#         self.make=make
+#         self.model=model
+#         self.rang=rang
+#         self.yil=yil
+#         self.narx=narx
+#         self.__km=km
+#         self.__id=uuid4()
+#
+#     def get_km(self):
+#         return self.__km
+#
+#     def get_id(self):
+#         return self.__id
+#
+#     def add_km(self,km):
+#         if km >= 0:
+#             self.__km += km
+#         else:
+#             print("mashina km ozgartirib bolmaydi")
+#
+#
+# avto1= Avto('GM','Tahoye','qora',2022,52000,100)
+# avto1.add_km(15000)
+# # print(f"ID:{avto1.get_id()}")
+# print(f"KM:{avto1.get_km()}")
+
+# class Avto:
+#     """Avbur"""
+#     num_avto=0
+#     def __init__(self,make,model,rang,yil,narx,km=0):
+#         self.make=make
+#         self.model=model
+#         self.rang=rang
+#         self.yil=yil
+#         self.narx=narx
+#         self.__km =km
+#         self.__id=uuid4()
+#         Avto.num_avto += 1
+
+#     @classmethod
+#     def get_num_avto(cls):
+#         return cls.num_avto
+#
+#
+# avto1 = Avto('GM', 'Tahoye', 'qora', 2022, 52000, 100)
+# avto2= Avto('GM','Tahoye','qora',2022,52000,100)
+# avto3= Avto('GM','Tahoye','qora',2022,52000,100)
+# avto4= Avto('GM','Tahoye','qora',2022,52000,100)
+# avto5= Avto('GM','Tahoye','qora',2022,52000,100)
+# avto6= Avto('GM','Tahoye','qora',2022,52000,100)
+# avto9= Avto('GM','Tahoye','qora',2022,52000,100)
+#
+#
+# print(f"{avto9.get_num_avto()} ta avtomobil bor")
+
+# class Avto:
+#     """Avbur"""
+#     num_avto=0
+#     def __init__(self,make,model,rang,yil,narx,km=0):
+#         self.make=make
+#         self.model=model
+#         self.rang=rang
+#         self.yil=yil
+#         self.narx=narx
+#         self.__km =km
+#         self.__id=uuid4()
+#         Avto.num_avto += 1
+#
+#     def __repr__(self):
+#         return f"Avto: {self.rang} {self.make} {self.model}"
+#
+# avto1=Avto('GM','Tahoye','qora',2022,52000,100)
+# print(avto1)
+
+# Avvalgi darslarimizda yaratgan Shaxs va Talaba klasslariga yopiq xususiyatlar qo'shing va ularning qiymatini ko'rsatuvchi va o'zgartiruvchi metodlar yozing.
+# Yuqoridagi klasslarga talabalar_soni va odamlar_soni degan klassga oid xususiyatlar qo'shing.
+# Klassga oid xususiyatlar bilan ishlash uchun maxsus @classmethod lar yozing
 
 
 class Foydalanuvchi:
     def __init__(self,ism,familiya,tyil):
+from uuid import uuid4
+class Talaba:
+    """Talaba nomli klass yaratamiz"""
+    def __init__(self,ism,familiya,tyil,coraklik_foyizi):
+        """Tqlabalarning xususiyatlari"""
         self.ism=ism
         self.familiya=familiya
         self.tyil=tyil
+        self.__choraklik_foyizi=coraklik_foyizi
+        self.__pasport_ID=uuid4()
+
+    def get_choraklik_foyizi(self):
+        return self.__choraklik_foyizi
+
+    def get_id(self):
+        return self.__pasport_ID
 
     def get_info(self):
         info=f"{self.ism} {self.familiya}, {self.tyil}-yil"
         return info
+    def add_choraklik_foyizi(self,choraklik_foyizi):
+        if choraklik_foyizi<=1000:
+            print("foyiz qabul qilindi")
+        else:
+            print("choraklik foyizini kopaytirib bolmaydi")
 
-foydalanuvchi=Foydalanuvchi('Imomaddin','Iskandarov',2008)
 print(foydalanuvchi.get_info())
 
 class Admin(Foydalanuvchi):
     def __init__(self,ism,familiya,tyil,teshkiruvchi):
         super().__init__(ism,familiya,tyil)
         self.teshkiruvchi=teshkiruvchi
+talaba1 = Talaba("imomaddin", "iskandarov", "2008","")
 
     def ban_user(self):
         return f"Foydalanuvchi {foydalanuvchi.get_info()} bloklandi."
+talaba1.add_choraklik_foyizi(459)
+print(talaba1.get_choraklik_foyizi())
 
 admin=Admin('Vali','Aliyev','2003','internet admini')
 print(admin.get_info())
