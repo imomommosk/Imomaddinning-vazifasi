@@ -830,8 +830,6 @@
 # talaba=Talaba('imomaddin','iskandarov','CI6513665','2008',65312136565)
 # print(talaba.get_info())
 
-class Manzil:
-    """Manzil saqlash uchun klass"""
 # class Manzil:
 #     """Manzil saqlash uchun klass"""
 #
@@ -880,12 +878,6 @@ class Manzil:
 # print(admin.get_info())
 # print(admin.ban_user())
 
-    def __init__(self, uy, kocha, tuman, viloyat):
-        """Manzil xususiyatlari"""
-        self.uy = uy
-        self.kocha = kocha
-        self.tuman = tuman
-        self.viloyat = viloyat
 #
 #
 # class Foydalanuvchi:
@@ -914,13 +906,7 @@ class Manzil:
 # print(admin.ban_user())
 # 1
 
-    def get_manzil(self):
-        """Manzilni ko'rish"""
-        manzil = f"{self.viloyat} viloyati, {self.tuman} tumani, "
-        manzil += f"{self.kocha} ko'chasi, {self.uy}-uy"
-        return manzil
-talaba_manzil= Manzil(12,"olmazor","bogbon","xorazm")
-talaba = Talaba("Valijon","Aliyev","JK6146351",2000,"62363143636814",talaba_manzil)
+# print(talaba.manzil.get_manzil())
 
 # class Foydalanuvchi:
 #     def __init__(self,ism,familiya,tyil):
@@ -1032,15 +1018,40 @@ talaba = Talaba("Valijon","Aliyev","JK6146351",2000,"62363143636814",talaba_manz
 # Klassga oid xususiyatlar bilan ishlash uchun maxsus @classmethod lar yozing
 
 
-class Foydalanuvchi:
-    def __init__(self,ism,familiya,tyil):
 from uuid import uuid4
-class Talaba:
-    """Talaba nomli klass yaratamiz"""
-    def __init__(self,ism,familiya,tyil,coraklik_foyizi):
-        """Tqlabalarning xususiyatlari"""
-        self.ism=ism
+# class Talaba:
+#     """Talaba nomli klass yaratamiz"""
+#     def __init__(self,ism,familiya,tyil,coraklik_foyizi):
+#         """Tqlabalarning xususiyatlari"""
+#         self.ism=ism
+#         self.familiya=familiya
+#         self.tyil=tyil
+#         self.__choraklik_foyizi=coraklik_foyizi
+#         self.__pasport_ID=uuid4()
+#
+#     def get_choraklik_foyizi(self):
+#         return self.__choraklik_foyizi
+#
+#     def get_id(self):
+#         return self.__pasport_ID
+#
+#     def add_choraklik_foyizi(self,choraklik_foyizi):
+#         if choraklik_foyizi<=1000:
+#             print("foyiz qabul qilindi")
+#         else:
+#             print("choraklik foyizini kopaytirib bolmaydi")
+#
+#
+# talaba1 = Talaba("imomaddin", "iskandarov", "2008","")
+#
+# talaba1.add_choraklik_foyizi(459)
+# print(talaba1.get_choraklik_foyizi())
+
+class Shaxs:
+    def __init__(self,ism,familiya,tyil,manzil):
+        self.ism = ism
         self.familiya=familiya
+        self.__pasport=uuid4()
         self.tyil=tyil
         self.__choraklik_foyizi=coraklik_foyizi
         self.__pasport_ID=uuid4()
@@ -1076,4 +1087,15 @@ print(talaba1.get_choraklik_foyizi())
 admin=Admin('Vali','Aliyev','2003','internet admini')
 print(admin.get_info())
 print(admin.ban_user())
-1
+1        self.manzil=manzil
+
+
+    def get_idraqam(self):
+        return self.__idraqam
+
+    def get_pasport(self):
+        return self.__pasport
+
+inson=Shaxs('imomaddin','iskandarov',2008,'xonqa63')
+print(f"shaxsning  ID raqami{inson.get_idraqam()}")
+print(f"pasport ID raqami{inson.get_pasport()}")
