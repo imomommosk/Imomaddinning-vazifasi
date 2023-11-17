@@ -11,7 +11,7 @@
 # print(sonlar_json)
 # print(ism_json)
 # print(x_json)
-import json
+# import json
 
 # import json
 #
@@ -54,14 +54,30 @@ import json
 # print(f"{kenglik},{uzunlik}")
 
 
+# import json
+#
+# data = {
+#     "Model" : "Malibu",
+#     "Rang" : "Qora",
+#     "Yil":2020,
+#     "Narh":40000
+#     }
+#
+# data_json=json.dumps(data)
+# print(data_json)
+
+
+
+
+
+
+
+
+
+
+
+
 import json
-
-data = {
-    "Model" : "Malibu",
-    "Rang" : "Qora",
-    "Yil":2020,
-    "Narh":40000
-    }
-
-data_json=json.dumps(data)
-print(data_json)
+talaba_json = """{"ism":"Hasan","familiya":"Husanov","tyil":2000}"""
+print(talaba_json)
+talba=json.dumps(talaba_json)
